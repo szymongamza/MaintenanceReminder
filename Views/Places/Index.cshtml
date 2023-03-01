@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<MaintenanceReminder.Models.Place>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Miejsca";
 }
 
-<h1>Index</h1>
+<h1>Miejsca</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create"><input type="submit" value="Dodaj Miejsce" class="btn btn-primary" /></a>
 </p>
 <table class="table">
     <thead>
@@ -25,9 +25,9 @@
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id"><input type="submit" value="Edytuj" class="btn btn-primary" /></a>
+                    <a asp-action="Details" asp-route-id="@item.Id"><input type="submit" value="Szczegóły" class="btn btn-primary" /></a>
+                    <a asp-action="Delete" asp-route-id="@item.Id"><input type="submit" value="Usuń" class="btn btn-danger" /></a>
             </td>
         </tr>
 }
