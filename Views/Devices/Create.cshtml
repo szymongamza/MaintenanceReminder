@@ -1,12 +1,12 @@
 ﻿@model MaintenanceReminder.Models.Device
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Dodaj";
 }
 
-<h1>Create</h1>
+<h1>Dodaj</h1>
 
-<h4>Device</h4>
+<h4>urządzenie</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -28,15 +28,15 @@
                 <span asp-validation-for="SerialNumber" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ManufacturerId" class="control-label"></label>
+                <label asp-for="Manufacturer" class="control-label"></label>
                 <select asp-for="ManufacturerId" class ="form-control" asp-items="ViewBag.ManufacturerId"></select>
             </div>
             <div class="form-group">
-                <label asp-for="MaintainerId" class="control-label"></label>
+                <label asp-for="Maintainer" class="control-label"></label>
                 <select asp-for="MaintainerId" class ="form-control" asp-items="ViewBag.MaintainerId"></select>
             </div>
             <div class="form-group">
-                <label asp-for="PlaceId" class="control-label"></label>
+                <label asp-for="Place" class="control-label"></label>
                 <select asp-for="PlaceId" class="form-control" asp-items="ViewBag.PlaceId"></select>
             </div>
             <div class="form-group">
@@ -50,7 +50,7 @@
                 <span asp-validation-for="DateTimeOfNextMaintenance" class="text-danger"></span>
             </div>
             <div class="form-group" style="margin-top: 5px">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Dodaj" class="btn btn-primary" />
             </div>
         </form>
     </div>
