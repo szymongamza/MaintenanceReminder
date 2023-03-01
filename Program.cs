@@ -1,4 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using MaintenanceReminder.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<MaintenanceReminderContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MaintenanceReminderContext") ?? throw new InvalidOperationException("Connection string 'MaintenanceReminderContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
