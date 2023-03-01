@@ -1,7 +1,7 @@
 ﻿@model MaintenanceReminder.Models.Device
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Szczegóły";
 }
 
 <h1>Szczegóły</h1>
@@ -66,5 +66,5 @@
 
 <div>
     <a asp-action="Edit" asp-route-id="@Model?.Id"><input type="submit" value="Edytuj" class="btn btn-primary" /></a>
-    <a asp-action="Index"><input type="submit" value="Powrót do listy" class="btn btn-primary" /></a>
+    <a asp-action="Index"><input type="button" value="Powrót do listy" class="btn btn-primary" /></a>
 </div>

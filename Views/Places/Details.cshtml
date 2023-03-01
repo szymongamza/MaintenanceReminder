@@ -1,13 +1,13 @@
 ﻿@model MaintenanceReminder.Models.Place
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Szczegóły";
 }
 
-<h1>Details</h1>
+<h1>Szczegóły</h1>
 
 <div>
-    <h4>Place</h4>
+    <h4>Miejsca</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -20,5 +20,5 @@
 </div>
 <div>
     <a asp-action="Edit" asp-route-id="@Model?.Id"><input type="submit" value="Edytuj" class="btn btn-primary" /></a>
-    <a asp-action="Index"><input type="submit" value="Powrót do listy" class="btn btn-primary" /></a>
+    <a asp-action="Index"><input type="button" value="Powrót do listy" class="btn btn-primary" /></a>
 </div>
