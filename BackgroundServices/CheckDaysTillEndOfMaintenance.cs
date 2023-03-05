@@ -1,6 +1,5 @@
 ﻿using MaintenanceReminder.Data;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Internal;
 using Quartz;
 
 namespace MaintenanceReminder.BackgroundServices;
@@ -19,7 +18,8 @@ public class CheckDaysTillEndOfMaintenance : IJob
         var devices = await _context.Device.ToListAsync();
         foreach (var device in devices)
         {
-            if(device.DateTimeOfNextMaintenance-DateTime.Now < TimeSpan.FromDays(3.0))
+            if (device.DaysTillEndOfMaintenance() < 3)
                 Console.WriteLine(device.Name);
         }
     }
+}

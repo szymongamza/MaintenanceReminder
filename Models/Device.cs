@@ -29,4 +29,11 @@ public class Device
     [DisplayName("Następny przegląd")]
     public DateTime DateTimeOfNextMaintenance { get; set; }
 
+    public int DaysTillEndOfMaintenance()
+    {
+        var timespan = DateTimeOfNextMaintenance - DateTime.Now;
+        int daysCount = timespan.Days;
+        return daysCount;
+    }
+
 }
